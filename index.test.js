@@ -29,7 +29,7 @@ describe('#Vec2 creation', () => {
 
 })
 
-describe('#Vec2 modifiers', () => {
+describe('#Vec2 simple methods', () => {
 
   beforeEach(function(){
     vec = new Vec2(10, 20)
@@ -105,5 +105,14 @@ describe('#Vec2 simple math', () => {
   it('should throw an error if trying to multiply by non-number or Vec2', () => {
     expect(() => { vec.multiply('10') }).to.throw(TypeError) 
   })
+
+})
+
+describe('#Vec2 vector math', () => {
+
+  it('should calculate the dot product')
+  it('should calculate the length')
+  it('should calculate the distance between two vectors')
+  it('should calculate the unit vector')
 
 })
