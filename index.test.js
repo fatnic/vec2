@@ -49,3 +49,30 @@ describe('#Vec2 modifiers', () => {
   })
 
 })
+
+describe('#Vec2 simple math', () => {
+  
+  beforeEach(function() {
+    vec  = new Vec2(10, 20)
+    vec2 = new Vec2(5, 5)
+  })
+
+  it('should be able to add another vector', () => {
+    expect(() => { vec.add(10) }).to.throw(TypeError) 
+
+    vec.add(vec2)
+
+    expect(vec.x).to.equal(15)
+    expect(vec.y).to.equal(25)
+  })
+
+  it('should be able to subtract another vector', () => {
+    expect(() => { vec.subtract(10) }).to.throw(TypeError) 
+
+    vec.subtract(vec2)
+    
+    expect(vec.x).to.equal(5)
+    expect(vec.y).to.equal(15)
+  })
+
+})
