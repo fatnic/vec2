@@ -2,9 +2,9 @@
   "name": "vec2",
   "version": "1.0.0",
   "description": "An ES6 vec2 class primarily for game development",
-  "main": "index.js",
+  "main": "src/vec2.js",
   "scripts": {
-    "test": "mocha test/index.test.js"
+    "test": "mocha test/vec2.test.js"
   },
   "author": "David Nicholson <fatnic388@gmail.com>",
   "license": "ISC",
