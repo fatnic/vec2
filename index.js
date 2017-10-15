@@ -32,6 +32,27 @@ const Vec2 = class Vec2 {
     this.y -= vec.y
     return this
   }
+
+  divide(val) {
+    if(val == 0) throw new Error('cannot divide by zero!')
+    if (typeof(val) != 'number') throw new TypeError("should be passed a number")    
+    this.x /= val
+    this.y /= val
+    return this
+  }
+
+  multiply(val) {
+    if (typeof(val) == 'number') {
+      this.x *= val
+      this.y *= val
+    } else if (val instanceof Vec2) {
+      this.x *= val.x
+      this.y *= val.y
+    } else {
+      throw new TypeError("expect a number or Vec2")
+    }
+    return this
+  }
   
 }
 

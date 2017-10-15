@@ -75,4 +75,33 @@ describe('#Vec2 simple math', () => {
     expect(vec.y).to.equal(15)
   })
 
+  it('should be able to divide by a value', () => {
+    expect(() => { vec.divide(vec2) }).to.throw(TypeError) 
+    
+    vec.divide(2)
+
+    expect(vec.x).to.equal(5)
+    expect(vec.y).to.equal(10)
+  })
+
+  it('should throw an error if trying to divide by zero', () => {
+    expect(() => { vec.divide(0) }).to.throw(Error) 
+  })
+
+  it('should be able to multiply by a number', () => {
+    vec.multiply(2)
+    expect(vec.x).to.equal(20)
+    expect(vec.y).to.equal(40)
+  })
+
+  it('should be able to multiply by a vector', () => {
+    vec.multiply(vec2)
+    expect(vec.x).to.equal(50)
+    expect(vec.y).to.equal(100)
+  })
+
+  it('should throw an error if trying to multiply by non-number or Vec2', () => {
+    expect(() => { vec.multiply('10') }).to.throw(TypeError) 
+  })
+
 })
