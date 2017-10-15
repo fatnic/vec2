@@ -1,5 +1,5 @@
 expect = require('chai').expect
-const Vec2  = require('./index')
+const Vec2  = require('../index')
 
 describe('#Vec2 creation', () => {
 
