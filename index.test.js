@@ -29,3 +29,23 @@ describe('#Vec2 creation', () => {
   })
 
 })
+
+describe('#Vec2 modifiers', () => {
+
+  beforeEach(function(){
+    vec = new Vec2(10, 20)
+  })
+
+  it('should be able to reset', () => {
+    vec.reset()
+    expect(vec.x).to.equal(0)
+    expect(vec.y).to.equal(0)
+  })
+
+  it('should be able to invert', () => {
+    vec.invert()
+    expect(vec.x).to.equal(-10)
+    expect(vec.y).to.equal(-20)
+  })
+
+})
