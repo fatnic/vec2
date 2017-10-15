@@ -1,6 +1,5 @@
 expect = require('chai').expect
-
-const { Vec2 } = require('./index')
+const Vec2  = require('./index')
 
 describe('#Vec2 creation', () => {
 
@@ -47,6 +46,9 @@ describe('#Vec2 modifiers', () => {
     expect(vec.x).to.equal(-10)
     expect(vec.y).to.equal(-20)
   })
+
+  it('should be able to test equality to another Vec2')
+  it('should be cloneable')
 
 })
 

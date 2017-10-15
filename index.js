@@ -1,4 +1,4 @@
-const Vec2 = class Vec2 {
+class Vec2 {
 
   constructor(x = 0, y = 0) {
     if (typeof(x) != 'number') throw new TypeError("'x' should be a number")
@@ -56,4 +56,4 @@ const Vec2 = class Vec2 {
   
 }
 
-module.exports = { Vec2 }
+if (typeof module != 'undefined' && module.exports) module.exports = Vec2
