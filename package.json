@@ -4,7 +4,7 @@
   "description": "An ES6 vec2 class primarily for game development",
   "main": "src/vec2.js",
   "scripts": {
-    "test": "mocha test/vec2.test.js"
+    "test": "clear && mocha test/vec2.test.js"
   },
   "author": "David Nicholson <fatnic388@gmail.com>",
   "license": "ISC",
