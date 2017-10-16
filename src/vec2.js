@@ -81,7 +81,7 @@ class Vec2 {
     return Math.sqrt((this.x - vec.x) * (this.x - vec.x) + (this.y - vec.y) * (this.y - vec.y))
   }
 
-  unit() {
+  get unit() {
     return this.divide(this.length)
   }
 
