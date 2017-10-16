@@ -47,6 +47,17 @@ describe('#Vec2 simple methods', () => {
     expect(vec.y).to.equal(-20)
   })
 
+  it('should be settable with a method', () => {
+    vec.set(1,2)
+    expect(vec.x).to.equal(1)
+    expect(vec.y).to.equal(2)
+  })
+
+  it('should only set with a number', () => {
+    expect(() => { vec.set('1', 2) }).to.throw(TypeError) 
+    expect(() => { vec.set(1, '2') }).to.throw(TypeError) 
+  })
+
   it('should be able to test equality to another Vec2')
   it('should be cloneable')
 

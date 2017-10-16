@@ -19,6 +19,14 @@ class Vec2 {
     return this
   }
 
+  set(x, y) {
+    if (typeof(x) != 'number') throw new TypeError("'x' should be a number")
+    if (typeof(y) != 'number') throw new TypeError("'y' should be a number")    
+    this.x = x
+    this.y = y
+    return this
+  }
+
   add(vec) {
     if (!(vec instanceof Vec2)) throw new TypeError("expect a Vec2 to be passed")    
     this.x += vec.x
