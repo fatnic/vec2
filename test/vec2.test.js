@@ -139,6 +139,8 @@ describe('#Vec2 vector math', () => {
     expect(vec.length).to.be.a('number')
   })
 
+  it('should be able to set a length and change the magnitude')
+
   it('should calculate the distance between two vectors', () => {
     let dist = vec.distance(new Vec2(10, 30))
     expect(dist).to.equal(10)
@@ -147,6 +149,11 @@ describe('#Vec2 vector math', () => {
   it('should calculate the unit vector', () => {
     let unit = vec.unit
     expect(unit.x).to.be.a('number')
+  })
+
+  it('should have an angle', () => {
+    let vec = new Vec2(1, 1)
+    expect(vec.angle).to.be.a('number')
   })
 
 })

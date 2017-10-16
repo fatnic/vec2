@@ -76,6 +76,11 @@ class Vec2 {
     return Math.sqrt(this.dot(this))
   }
 
+  set length(val) {
+    if (typeof(val) != 'number') throw new TypeError("should be passed a number")        
+    // this will set the magnitude 
+  }
+
   distance(vec) {
     if (!(vec instanceof Vec2)) throw new TypeError("expect a Vec2 to be passed")        
     return Math.sqrt((this.x - vec.x) * (this.x - vec.x) + (this.y - vec.y) * (this.y - vec.y))
@@ -83,6 +88,10 @@ class Vec2 {
 
   get unit() {
     return this.divide(this.length)
+  }
+
+  get angle() {
+    return Math.asin(this.y / this.length)
   }
 
 }
