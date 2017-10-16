@@ -72,6 +72,15 @@ class Vec2 {
     return Math.sqrt(this.dot(this))
   }
 
+  distance(vec) {
+    if (!(vec instanceof Vec2)) throw new TypeError("expect a Vec2 to be passed")        
+    return Math.sqrt((this.x - vec.x) * (this.x - vec.x) + (this.y - vec.y) * (this.y - vec.y))
+  }
+
+  unit() {
+    return this.divide(this.length())
+  }
+
 }
 
 if (typeof module != 'undefined' && module.exports) module.exports = Vec2
