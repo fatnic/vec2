@@ -136,7 +136,7 @@ describe('#Vec2 vector math', () => {
   })
 
   it('should calculate the length', () => {
-    let length = vec.length()
+    let length = vec.length
     expect(length).to.be.a('number')
   })
 

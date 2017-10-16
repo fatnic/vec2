@@ -71,7 +71,7 @@ class Vec2 {
     return this.x * vec.x + this.y * vec.y
   }
 
-  length() {
+  get length() {
     if (!(vec instanceof Vec2)) throw new TypeError("expect a Vec2 to be passed")        
     return Math.sqrt(this.dot(this))
   }
@@ -82,7 +82,7 @@ class Vec2 {
   }
 
   unit() {
-    return this.divide(this.length())
+    return this.divide(this.length)
   }
 
 }
