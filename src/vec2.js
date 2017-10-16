@@ -27,6 +27,10 @@ class Vec2 {
     return this
   }
 
+  print() {
+    return `[${this.x}, ${this.y}]`
+  }
+
   add(vec) {
     if (!(vec instanceof Vec2)) throw new TypeError("expect a Vec2 to be passed")    
     this.x += vec.x

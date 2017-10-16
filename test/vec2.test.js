@@ -61,6 +61,10 @@ describe('#Vec2 simple methods', () => {
   it('should be able to test equality to another Vec2')
   it('should be cloneable')
 
+  it('should have a printable output', () => {
+    expect(vec.print()).to.equal('[10, 20]')
+  })
+
 })
 
 describe('#Vec2 simple math', () => {
