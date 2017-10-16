@@ -120,9 +120,22 @@ describe('#Vec2 simple math', () => {
 })
 
 describe('#Vec2 vector math', () => {
+  
+  beforeEach(function() {
+    vec  = new Vec2(10, 20)
+    vec2 = new Vec2(5, 5)
+  })
 
-  it('should calculate the dot product')
-  it('should calculate the length')
+  it('should calculate the dot product', () => {
+    let dot = vec.dot(vec2)
+    expect(dot).to.equal(150)
+  })
+
+  it('should calculate the length', () => {
+    let length = vec.length()
+    expect(length).to.be.a('number')
+  })
+
   it('should calculate the distance between two vectors')
   it('should calculate the unit vector')
 

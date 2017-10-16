@@ -62,6 +62,16 @@ class Vec2 {
     return this
   }
   
+  dot(vec) {
+    if (!(vec instanceof Vec2)) throw new TypeError("expect a Vec2 to be passed")        
+    return this.x * vec.x + this.y * vec.y
+  }
+
+  length() {
+    if (!(vec instanceof Vec2)) throw new TypeError("expect a Vec2 to be passed")        
+    return Math.sqrt(this.dot(this))
+  }
+
 }
 
 if (typeof module != 'undefined' && module.exports) module.exports = Vec2
